@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>大头儿子送豪礼 100%中奖</title>
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="top">
+        <img class="top-center" src="images/top-img.png" alt="">
+        <img class="circle-bg" src="images/half-circle-bg.png" alt="">
+        <div class="title-box">
+            <img class="shake-tip" src="images/shake-tip.png" alt="摇一摇领大奖">
+        </div>
+    </div>
+    <div class="lottery-box" id="lottery">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="lottery-unit lottery-unit-0"></td>
+                <td class="lottery-unit lottery-unit-1"></td>
+                <td class="lottery-unit lottery-unit-2"></td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-7"></td>
+                <td class="prize-center-box">
+                    <div class="shaking-box">
+                        <img class="J-shake shaking" src="images/hand-shake.png" alt="">
+                    </div>
+                </td>
+                <td class="lottery-unit lottery-unit-3"></td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-6"></td>
+                <td class="lottery-unit lottery-unit-5"></td>
+                <td class="lottery-unit lottery-unit-4"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="tip-box J-prize-tip">
+    <div class="tip">
+        <div class="prize-box"></div>
+        <div class="desc-box"></div>
+        <div class="btn-box">
+            <a href="javascript:void(0);" class="btn achieve-btn J-achieve-btn"></a>
+            <a href="javascript:void(0);" class="btn again-btn J-again-btn"></a>
+        </div>
+    </div>
+</div>
+<div class="tip-box J-no-prize-tip">
+    <div class="tip">
+        <div class="no-prize-box"></div>
+        <div class="desc-box"></div>
+        <div class="btn-box">
+            <a href="javascript:void(0);" class="btn share-btn J-share-btn"></a>
+            <a href="javascript:void(0);" class="btn again-btn J-again-btn"></a>
+        </div>
+    </div>
+</div>
+<div class="tip-box J-achieve-tip">
+    <div class="tip">
+        <div class="desc-box">
+            <p class="title-1">兑现的不是奖，是好运哦~</p>
+            <p class="title-1">央视动画祝大家</p>
+            <p class="title-1">在新年都能获得好运气</p>
+        </div>
+        <div class="btn-box">
+            <a href="javascript:void(0);" class="btn share-to-guy-btn J-share-btn"></a>
+        </div>
+    </div>
+</div>
+<div class="tip-box J-share-tip">
+    <p class="share-desc"><img src="images/share-font.png" alt="赶紧分享给小伙伴吧"></p>
+    <img src="images/index-son.png" alt="" class="share-son">
+</div>
+<script type="text/javascript" src="js/zepto-shake-main.min.js"></script>
+
+<script>
+    $(".J-shake").click(function () {
+        shakeEventDidOccur();
+    });
+</script>
+
+<script type="text/javascript" src="http://api.youziku.com/wwwroot/js/g_webfont.min.js"></script>
+<script type="text/javascript">
+    WebFont.load({
+        custom: {
+            urls: ['http://api.youziku.com/webfont/CSS/56a8af5ff629d80bbce7c684']
+        }
+    });
+</script>
+</body>
+</html>

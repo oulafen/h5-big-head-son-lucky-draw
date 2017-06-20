@@ -1,0 +1,352 @@
+/** base style **/
+@import "mixin";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a , a:hover{
+  text-decoration: none;
+}
+html{
+  font-size: 1rem;
+}
+body{
+  box-sizing: border-box;
+  background-color: #ffe66e;
+}
+.container{
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  padding-bottom: 2rem;
+  overflow: hidden;
+
+  .top{
+    background-color: #f63552;
+    img.top-center{
+      width: 100%;
+      text-align: center;
+    }
+    img.circle-bg{
+      position: absolute;
+      width: 100%;
+      margin-top: -2.9rem;
+      left: 0;
+      height: 3rem;
+    }
+    .title-box{
+      position: absolute;
+      margin-top: -3rem;
+      width: 34%;
+      left: 50%;
+      margin-left: -17%;
+      img.shake-tip{
+        width: 100%;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        padding: 18%;
+        background: url("../images/coin-100.png") no-repeat center 0;
+        background-size: contain;
+        left: -76%;
+      }
+      &:after{
+        position: absolute;
+        content: '';
+        padding: 18%;
+        background: url("../images/coins.png") no-repeat center 0;
+        background-size: contain;
+        top: 0;
+        right: -72%;
+      }
+    }
+  }
+  .lottery-box{
+    width: 22rem;
+    height: 19.36rem;
+    margin: 3rem auto 0;
+    background: url("../images/lottery-bg.png") no-repeat center center;
+    background-size: contain;
+    padding: 1.3rem 1rem;
+    tr, td{
+      vertical-align: middle;
+    }
+    img{
+      width: 100%;
+    }
+    .lottery-unit{
+      width: 7rem;
+      height: 5.3rem;
+      border: .4rem solid #dc1830;
+      &.active{
+        background-color: #dc1830;
+      }
+    }
+    &:after{
+      content: '';
+      width: 18rem;
+      position: absolute;
+      height: 2rem;
+      background: url("../images/prize-box-bottom.png") no-repeat center 0;
+      background-size: contain;
+      left: 50%;
+      margin-left: -9rem;
+      margin-top: 1rem;
+    }
+    .lottery-unit-0{
+      @include lotteryUnitBg(-100% * 0);
+    }
+    .lottery-unit-1{
+      @include lotteryUnitBg(-100% * 1);
+    }
+    .lottery-unit-2{
+      @include lotteryUnitBg(-100% * 2);
+    }
+    .lottery-unit-3{
+      @include lotteryUnitBg(-100% * 3);
+    }
+    .lottery-unit-4{
+      @include lotteryUnitBg(-100% * 4);
+    }
+    .lottery-unit-5{
+      @include lotteryUnitBg(-100% * 5);
+    }
+    .lottery-unit-6{
+      @include lotteryUnitBg(-100% * 6);
+    }
+    .lottery-unit-7{
+      @include lotteryUnitBg(-100% * 7);
+    }
+    .prize-center-box{
+      border: .4rem solid #dc1830;
+      .shaking-box{
+        background-color: #fffe00;
+      }
+    }
+  }
+}
+
+.tip-box{
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.9);
+  display: none;
+  .tip{
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -45%;
+    text-align: center;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    .prize-box{
+      @include bgContain('../images/tip-top-bg.png');
+      width: 100%;
+      height: 16rem;
+      img.prize-img{
+        position: absolute;
+        max-height: 6rem;
+        top: 6rem;
+        left:50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        max-width: 11.5rem;
+      }
+    }
+    .no-prize-box{
+      padding: 0 3rem;
+      img{
+        width: 100%;
+      }
+    }
+    .desc-box{
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #fefed4;
+      line-height: 1.5;
+      white-space: nowrap;
+      .title-1, .title-2{
+        color: #ffde28;
+        letter-spacing: 0;
+      }
+      .title-1{
+        font-size: 1.4rem;
+      }
+      .title-2{
+        font-size: 1.6rem;
+      }
+      p{
+        font-family:'minijianzhunyua12816557548d3';
+      }
+    }
+    .btn-box{
+      margin-top: 2rem;
+      width: 100%;
+      .btn{
+        display: inline-block;
+        height:3rem;
+        width: 45%;
+        background: url('../images/btns.png') repeat;
+        background-size: 100% 400%;
+      }
+      .achieve-btn{
+        background-position: center 0%;
+      }
+      .again-btn{
+        background-position: center -100%;
+      }
+      .share-to-guy-btn{
+        background-position: center -200%;
+      }
+      .share-btn{
+        background-position: center -300%;
+      }
+    }
+  }
+  .share-desc{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    width: 1.8rem;
+    color: #ffde28;
+    font-size: 1.6rem;
+    font-weight: bold;
+    img{
+      width: 100%;
+    }
+  }
+  .share-son{
+    position: absolute;
+    right: 5rem;
+    top: 18rem;
+    width: 7.5rem;
+  }
+}
+
+.shaking{
+  -webkit-animation: shake .8s 0s infinite alternate ease-in-out;
+  -moz-animation: shake .8s 0s infinite alternate ease-in-out;
+  -o-animation: shake .8s 0s infinite alternate ease-in-out;
+  animation: shake .8s 0s infinite alternate ease-in-out;
+}
+
+.warning{
+  color: #ff4f2a;
+}
+
+audio{
+  display: none;
+}
+
+@keyframes shake
+{
+0% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: 50% 100%;
+}
+33% {
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  transform-origin: 50% 100%;
+}
+66% {
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+  transform-origin: 50% 100%;
+}
+100% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: 50% 100%;
+}
+}
+
+@-webkit-keyframes shake /* Safari and Chrome */
+{
+0% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: 50% 100%;
+}
+33% {
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  transform-origin: 50% 100%;
+}
+66% {
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+  transform-origin: 50% 100%;
+}
+100% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: 50% 100%;
+}
+}
+
+
+@media screen and (min-width: 1000px){
+  html{
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 768px){
+  html{
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 414px){
+  html{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 375px){
+  html{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 320px){
+  html{
+    font-size: 12px;
+  }
+}
+@media screen and (min-aspect-ratio: 375/620) {
+  .container{
+    .top {
+      img.top-center{
+        width: 90%;
+        margin-top: -2rem;
+      }
+      img.circle-bg{
+        position: relative;
+        margin-bottom: -2%;
+      }
+    }
+  }
+}
+@media screen and (min-aspect-ratio: 320/500){
+  .container{
+    .top{
+      img.top-center{
+        width: 88%;
+        margin-bottom: -1rem;
+      }
+    }
+    .lottery-box{
+      margin-top:1.5rem;
+    }
+  }
+
+}
